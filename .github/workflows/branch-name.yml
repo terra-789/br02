@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  show bn:
+  show-bn:
     runs-on: ubuntu-latest
 
     steps:
