@@ -21,10 +21,8 @@ jobs:
       - name: show
         run: |
           echo GITHUB_ENV: $GITHUB_ENV
-      - name: calculate branch_env_name 
-        run: echo '::set-output name=SELECTED_COLOR::green'
-        id: branch_env_name1
-        
+          echo branch_env_name=${GITHUB_REF#refs/*/}>> $GITHUB_ENV
+          echo $branch_env_name
       - name: show branch_env_name 
         run: echo ${branch_env_name}
 
