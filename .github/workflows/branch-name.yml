@@ -4,11 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-terraform-scripts:
+  show-bn:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./azsvcs 
 
     
     steps:
