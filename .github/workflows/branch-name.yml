@@ -13,5 +13,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: show
-        run: echo ${GITHUB_REF#refs/*/}
+        run: |
+          export env_name=${GITHUB_REF#refs/*/}
+          echo $env_name
 
+      - name: show1
+        run: |
+          echo $env_name
