@@ -17,10 +17,16 @@ jobs:
       ARM_SUBSCRIPTION_ID: d3819925-7e44-4f5f-8733-1067beaa45ec
       ARM_CLIENT_ID: acfa0cc8-3712-46b8-955c-9f5dae0ef4ab
       ARM_TENANT_ID: 58975fd3-4977-44d0-bea8-37af0baac100
-      branch_env_name: ${{GITHUB_REF#refs/*/}}
     
     steps:
 
+      - name: show
+        run: |
+          echo GITHUB_ENV: $GITHUB_ENV
+      - name: calculate branch_env_name 
+        run: echo '::set-output name=SELECTED_COLOR::green'
+        id: branch_env_name1
+        
       - name: show branch_env_name 
         run: echo ${branch_env_name}
 
